@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       get() {
         const image = this.getDataValue('image');
-        return image ? `${process.env.SERVER || config.app.server}:${process.env.PORT || config.app.port}` + image.substring(1) : null
+        return image ? `${process.env.SERVER || config.app.server}` + image.substring(1) : null
       }
     },
     rentPerDay: DataTypes.INTEGER,

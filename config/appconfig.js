@@ -10,7 +10,7 @@ module.exports = {
     port: process.env.DEV_APP_PORT || 8000,
     appName: process.env.APP_NAME || "bcr-backend-api",
     env: process.env.NODE_ENV || "development",
-    server: process.env.SERVER || "localhost",
+    server: process.env.SERVER || "https://challange7-tim4-api.herokuapp.com",
     jwtSecret: process.env.SECRET_KEY || "BinarUniqueKey",
     jwtExpire: process.env.JWT_EXPIRE || "12h",
   }

@@ -1,32 +1,36 @@
 {
-  "name": "car-web-application",
+  "name": "backend",
   "version": "1.0.0",
-  "main": "app/index.js",
+  "description": "Backend Service for BCR React Node",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "develop": "nodemon -q bin/www",
-    "db:create": "./node_modules/.bin/sequelize-cli db:create",
-    "db:drop": "./node_modules/.bin/sequelize-cli db:drop",
-    "db:migrate": "./node_modules/.bin/sequelize-cli db:migrate",
-    "db:rollback": "./node_modules/.bin/sequelize-cli db:migrate:undo",
-    "db:seed": "./node_modules/.bin/sequelize-cli db:seed:all",
-    "build": "npm run db:migrate"
+    "test": "node server/index.js",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
-  "license": "MIT",
+  "keywords": [
+    "API"
+  ],
+  "author": "Team 4",
+  "license": "ISC",
   "dependencies": {
+    "@react-oauth/google": "^0.2.4",
     "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.16",
     "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "react-google-login": "^5.2.2",
     "sequelize": "^6.19.2",
-    "sequelize-cli": "^6.4.1",
-    "sessionstorage": "^0.1.0",
-    "swagger-ui-express": "^4.4.0",
-    "yamljs": "^0.3.0"
+    "sessionstorage": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "sequelize-cli": "^6.4.1"
   }
 }

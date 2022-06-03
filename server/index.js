@@ -21,6 +21,6 @@ app.use(require("../router"));
 
 app.listen(process.env.PORT || config.app.port, () => {
   console.log(
-    `Service online at ${process.env.SERVER || config.app.server}:${process.env.PORT || config.app.port}`
+    `Service online at ${process.env.SERVER || config.app.server} & Port:${process.env.PORT || config.app.port}`
   );
 });
